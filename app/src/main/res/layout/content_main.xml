@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/emojicons_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <io.github.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/emojicons_edit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="left|top"
+            android:padding="8dp"
+            android:textSize="18sp"
+            emojicon:emojiconSize="18sp"
+            android:hint="分享您的那点新鲜事儿..."
+            android:maxLines="5" />
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="asdasdasda"/>-->
+
+
+
+        <include
+            layout="@layout/lay_publish_btns" android:layout_width="match_parent" android:layout_height="50dip"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/emojicons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></RelativeLayout>
+</LinearLayout>
